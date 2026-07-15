@@ -1,16 +1,15 @@
 [project]
-name = "bagof-things"
-# Replace these template contacts before publishing.
+name = "griffe-typing-extensions"
 authors = [
-    {name = "Your Name", email = "your.email@example.com"},
+    {name = "Yael Balbastre", email = "yael.balbastre@gmail.com"},
 ]
 maintainers = [
-    {name = "Your Name", email = "your.email@example.com"},
+    {name = "Yael Balbastre", email = "yael.balbastre@gmail.com"},
 ]
-description = "Template package for bagof.things"
+description = "A griffe extension that converts typing_extensions to typing"
 readme = "README.md"
 license = {text = "MIT"}
-keywords = ["bagof", "template", "python"]
+keywords = ["griffe", "typing"]
 classifiers = [
     "Development Status :: 1 - Planning",
     "Intended Audience :: Developers",
@@ -25,15 +24,13 @@ classifiers = [
 ]
 dynamic = ["version"]
 requires-python = ">=3.8"
-dependencies = [
-    "typing_extensions>=4.13",
-]
+dependencies = ["griffe"]
 
 [project.urls]
-Homepage = "https://github.com/bagofseeds/bagof-things"
-Documentation = "https://github.com/bagofseeds/bagof-things#readme"
-Issues = "https://github.com/bagofseeds/bagof-things/issues"
-Repository = "https://github.com/bagofseeds/bagof-things"
+Homepage = "https://github.com/bagofseeds/griffe-typing-extensions"
+Documentation = "https://github.com/bagofseeds/griffe-typing-extensions#readme"
+Issues = "https://github.com/bagofseeds/griffe-typing-extensions/issues"
+Repository = "https://github.com/bagofseeds/griffe-typing-extensions"
 
 [project.optional-dependencies]
 test = [
@@ -53,8 +50,7 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["bagof*"]
-namespaces = true
+include = ["griffe_typing_extensions"]
 
 [tool.versioningit]
 default-version = "0+unknown"
@@ -72,21 +68,3 @@ file = "src/bagof/things/_version.py"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-
-[tool.ruff]
-line-length = 79
-target-version = "py38"
-
-[tool.ruff.lint]
-select = ["ANN", "B", "E", "F", "I", "UP", "W"]
-ignore = [
-    "ANN002",   # Do not type *args
-    "ANN003",   # Do not type *kwargs
-    "ANN401",   # Allow typing with Any
-    "UP006",    # Old-style collections hints (List instead of list)
-    "UP035",    # Use `typing_extensions` instead of `typing`
-]
-
-[tool.codespell]
-check-filenames = true
-skip = ".git,*.egg-info,build,dist,*.pdf,*.svg"
