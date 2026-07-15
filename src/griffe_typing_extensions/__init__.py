@@ -5,16 +5,16 @@ from griffe import Extension
 
 
 class TypingExtensionsToTyping(Extension):
-  """
-  Griffe extension that converts typing_extensions imports
-  into typing imports. This allows mkdocstring's modernization
-  option to work on typing_extensions hint (assuming they are all
-  available in the most recent version of python).
-  
-  Note that hints will now cross-reference with python's `typing`,
-  not with `typing_extensions`. There may be issues if objects 
-  imported from typing_extensions do not exist in `typing`.
-  """
+    """
+    Griffe extension that converts typing_extensions imports
+    into typing imports. This allows mkdocstring's modernization
+    option to work on typing_extensions hint (assuming they are all
+    available in the most recent version of python).
+    
+    Note that hints will now cross-reference with python's `typing`,
+    not with `typing_extensions`. There may be issues if objects 
+    imported from typing_extensions do not exist in `typing`.
+    """
 
     def on_node(self, *, node, **kwargs):
         # This does not seem to work
