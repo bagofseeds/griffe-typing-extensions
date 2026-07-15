@@ -15,4 +15,4 @@ permissions:
 
 jobs:
   tests:
-    uses: ./.github/workflows/test-matrix.yaml
+    uses: ./.github/workflows/test.yaml
