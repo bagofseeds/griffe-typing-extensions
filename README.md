@@ -1,16 +1,10 @@
-# bagof-things
+# griffe-typing-extensions
 
-Template repository for `bagof` Python projects.
+A `griffe` extension that converts `typing_extensions` imports
+into `typing` imports. This allows `mkdocstrings`' modernization
+option to work on `typing_extensions` hints (assuming they are all
+available in the most recent version of python).
 
-This template includes:
-
-- a `pyproject.toml` configured for a `bagof.things` package
-- a `bagof` namespace package under `src/`
-- reusable GitHub Actions for linting, testing, and publishing
-
-The workflow wrappers intentionally track `bagofseeds/actions@main` so
-template-generated repositories inherit shared CI updates without manually
-refreshing pinned workflow SHAs.
-
-When using the template, replace `things` with your project-specific package
-name.
+Note that hints will now cross-reference with `typing`,
+not with `typing_extensions`. There may be issues if objects 
+imported from `typing_extensions` do not exist in `typing`.
