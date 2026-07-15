@@ -64,7 +64,7 @@ dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
 distance-dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
 
 [tool.versioningit.write]
-file = "src/bagof/things/_version.py"
+file = "src/griffe_typing_extensions/_version.py"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
