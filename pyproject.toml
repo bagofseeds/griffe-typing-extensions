@@ -14,7 +14,6 @@ classifiers = [
     "Development Status :: 1 - Planning",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -23,8 +22,8 @@ classifiers = [
     "Typing :: Typed",
 ]
 dynamic = ["version"]
-requires-python = ">=3.8"
-dependencies = ["griffe"]
+requires-python = ">=3.9"
+dependencies = ["griffe>=1.14"]
 
 [project.urls]
 Homepage = "https://github.com/bagofseeds/griffe-typing-extensions"

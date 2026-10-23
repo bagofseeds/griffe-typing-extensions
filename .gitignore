@@ -1,5 +1,6 @@
 # versioningit
 src/bagof/*/_version.py
+src/griffe_typing_extensions/_version.py
 
 # vscode
 .vscode
